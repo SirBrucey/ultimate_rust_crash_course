@@ -64,6 +64,14 @@ fn count(arg: String) {
     // You will need to count your loops, somehow.  Run it with `cargo run bananas`
     //
     // print!("{} ", arg); // Execute this line 8 times, and then break. `print!` doesn't add a newline.
+    let mut i = 0;
+    loop {
+        i += 1;
+        println!("{} ", arg);
+        if i == 8 {
+            break;
+        }
+    }
 
     println!(); // This will output just a newline at the end for cleanliness.
 }
