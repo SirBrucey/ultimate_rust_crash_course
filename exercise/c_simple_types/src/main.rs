@@ -48,5 +48,5 @@ fn main() {
     // output. Then go refactor the print_distance() function according to the
     // instructions in the comments inside that function.
 
-    // print_distance(coords);
+    print_distance(coords);
 }
