@@ -50,10 +50,13 @@ fn main() {
     // Hint: Define the generic type between the function name and open paren:
     //       fn function_name<T: Bite>(...)
     //
-    //bunny_nibbles(&mut carrot);
-    //println!("Bunny nibbles for awhile: {:?}", carrot);
+    bunny_nibbles(&mut carrot);
+    println!("Bunny nibbles for awhile: {:?}", carrot);
 }
 
+fn bunny_nibbles<T: Bite>(t: &mut T) {
+    (0..10).for_each(|_| t.bite());
+}
 #[derive(Debug)] // This enables using the debugging format string "{:?}"
 struct Carrot {
     percent_left: f32,
