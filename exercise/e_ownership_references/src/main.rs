@@ -15,6 +15,10 @@ fn change(s: &mut String) {
     }
 }
 
+fn eat(s: String) -> bool {
+    s.starts_with("b") && s.contains("a")
+}
+
 fn main() {
     // This fancy stuff either gets the first argument as a String, or prints
     // usage and exits if an argument was not supplied to the program.
@@ -42,11 +46,11 @@ fn main() {
     // Hint 1: use `.starts_with("b")` and `.contains("a")`
     // Hint 2: `&&` is the boolean "AND" operator
     //
-    //if eat(arg) {
-    //    println!("Might be bananas");
-    //} else {
-    //    println!("Not bananas");
-    //}
+    if eat(arg) {
+        println!("Might be bananas");
+    } else {
+        println!("Not bananas");
+    }
 
     // Try running this program with "boat", "banana", and "grapes" as the arguments :-)
 
