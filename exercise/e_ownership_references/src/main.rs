@@ -19,6 +19,10 @@ fn eat(s: String) -> bool {
     s.starts_with("b") && s.contains("a")
 }
 
+fn bedazzle(s: &mut String) {
+    *s = "sparkly".to_string();
+}
+
 fn main() {
     // This fancy stuff either gets the first argument as a String, or prints
     // usage and exits if an argument was not supplied to the program.
@@ -61,8 +65,8 @@ fn main() {
     // Hint: You will need to dereference the mutable reference in order to assign it a
     // new value.
     //
-    // let mut material = "mud".to_string();
-    // println!("This material is just `{}`.", material);
-    // bedazzle(&mut material);
-    // println!("Wow! Now the material is `{}`!", material);
+    let mut material = "mud".to_string();
+    println!("This material is just `{}`.", material);
+    bedazzle(&mut material);
+    println!("Wow! Now the material is `{}`!", material);
 }
